@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body {
+            margin-left: 50px;
+        }
+
+        .container,
+        .inner {
+            width: 150px;
+            height: 150px;
+        }
+
+        .container {
+            background-color: aqua;
+            border: 2px solid salmon;
+        }
+
+        .inner {
+            background-color: palegoldenrod;
+            border: 2px solid slategray;
+
+            /* transform scale এ দুইটা ভ্যালু নেয় x-axis and y-axis */
+            /* scale 2x, 1x multiply use করে, base এর কতগুন হবে তা বলতে হবে */
+            /* প্রথমে x-axis, পরে y-axis */
+            transform: scale(0.50, 0.75);
+            /* transform rotate positive & nagative value নেয়। */
+
+            /* transform: rotate(45deg);  */
+            transform: rotate(-45deg);
+
+            /* transform translate px % rem em valu নেয়। positive negative value ney */
+            transform: translate(50px);
+
+            /* multiple transform use করতে হলে একটি property এর মধ্যে use করতে হবে। */
+            /* transform: scale(0.5) rotate(45deg) translate(20px); */
+
+        }
+
+        .inner:hover {
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Explore Transform and Translate</h2>
+    <div class="container">
+        <div class="inner">Inner 1</div>
+    </div>
+    <div class="container">
+        <div class="inner">Inner 2</div>
+    </div>
+    <div class="container">
+        <div class="inner">Inner 3</div>
+    </div>
+</body>
+
+</html>
