@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes ping-pong {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: 400px;
+                background-color: brown;
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 200px;
+                top: 200px;
+            }
+
+            50% {
+                left: 400px;
+                top: 0;
+            }
+
+            100% {
+                left: 500px;
+                top: 200px
+            }
+        }
+
+        .stage {
+            width: 700px;
+            height: 300px;
+            border: 2px solid steelblue;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 2s ease-out 1s infinite alternate;
+            /* animation: ping-pong 2s linear 1s infinite alternate; */
+        }
+
+        /**
+        animation: 
+        name : animation এর একটা name থাকবে
+        duration : কতক্ষন সময় ধরে চলবে।
+        timing-function: কিভাবে চলবে ease-in ease-out linear ease-in-out
+        delay : animation start হতে কতক্ষন দেরী হবে।
+        iteration-count: কত বার চলবে একবার নাকি এর অধিক নাকি অবিরাম।
+        direction : কোন দিকে চলবে normal, reverse, alternate, alternate-reverse
+        fill-mode; কোথায় গিয়ে থামবে
+        */
+    </style>
+</head>
+
+<body>
+    <h2>Explore Animation</h2>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
