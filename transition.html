@@ -22,10 +22,17 @@
             transform: rotate(45deg) scale(1.5) translate(100px);
 
         }
+
+        .text-gradient {
+            background: linear-gradient(to left, #fc0202 0%, #01476b 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 
 <body>
+    <h1 class="text-gradient">HELLO WORLD</h1>
     <ul>
         <li>Transform: change the shape, this is css style property</li>
         <li>Translate: It is value of transform style rule. this is means move shape either x or y axis or both axis

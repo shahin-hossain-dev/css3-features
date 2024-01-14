@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        /* var define korte hoy :root{--color: black} */
+        /* var use করতে হয় color: var(--varName) */
+        /* calc এর ব্যবহার হলো কোনো কিছুকে calculation করে বসানো। যেমন width: calc(100% - 20px) */
+        :root {
+            --defaultColor: rgba(16, 8, 130, 0.700);
+            --primaryFont: 16px;
+        }
+
+        h1 {
+            color: var(--defaultColor);
+        }
+
+        h5 {
+            background-color: var(--defaultColor);
+        }
+
+        .box {
+            border: 1px solid var(--defaultColor);
+            width: calc(100% - 148px);
+            margin: auto;
+            padding: 20px;
+        }
+
+        .box h3 {
+            color: var(--defaultColor);
+        }
+
+        .box p {
+            color: var(--defaultColor);
+            font-size: var(--primaryFont);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px calc((100% - 200px) - 20px);
+            gap: 20px;
+        }
+
+        aside {
+            background-color: lightgray;
+        }
+
+        main {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Customs Property</h1>
+    <h5> Also Commonly known as CSS Variable</h5>
+    <div class="box">
+        <h3>Im doing something</h3>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Provident, alias harum culpa soluta dolores omnis
+            consectetur placeat minus vero natus quisquam. Blanditiis
+            sunt libero officiis autem porro molestias under
+            exercitationem.
+        </p>
+    </div>
+    <div class="container">
+        <aside>Side bar</aside>
+        <main> Main Content</main>
+    </div>
+</body>
+
+</html>
